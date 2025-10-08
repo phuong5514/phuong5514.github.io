@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Study Group - Home</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="default.html">
+                    <img src="images/Logo.svg" alt="Lazer pointer" class="header__title">
+                </a>
+            </div>
+            <button class="header__menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="header__menu-icon"></span>
+                <span class="header__menu-icon"></span>
+                <span class="header__menu-icon"></span>
+            </button>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#course-info" class="header__nav-link">Course</a></li>
+                    <li class="header__nav-item"><a href="#group-photo" class="header__nav-link">Group Photo</a></li>
+                    <li class="header__nav-item"><a href="#members" class="header__nav-link">Members</a></li>
+                    <li class="header__nav-item">
+                        <select class="header__member-select" id="memberSelect">
+                            <option value="" disabled selected>Jump to Member</option>
+                            <option value="members/22120287/22120287.html">Nguyễn Mạnh Phương</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb__container">
+            <a href="default.html" class="breadcrumb__link">Home</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About This Page</h2>
+            <div class="about-content">
+                <p>Welcome to Lazer pointer's group page! This website was created as part of our web development coursework at the University of Science, VNU-HCM. As Computer Science students specializing in Software Engineering, We're passionate about building elegant and functional web applications.</p>
+                
+                <p>This project showcases our understanding of modern web development practices, including responsive design, semantic HTML, CSS architecture using BEM methodology, and creating accessible user interfaces. The site demonstrates our ability to implement IBM's Carbon Design System principles while maintaining clean, maintainable code.</p>
+                
+                <p>Through this project, We've applied key concepts such as mobile-first design, CSS Grid and Flexbox layouts, and progressive enhancement. We're continuously learning and improving our skills in web technologies, always striving to create better user experiences and write more efficient code.</p>
+            </div>
+        </section>
+
+        <!-- Course Information Section -->
+        <section id="course-info">
+            <h2>Course Information</h2>
+            <div class="course-info-container">
+                <div class="course-info-card">
+                    <div class="course-info-header">
+                        <h3 class="course-info__title">Web Application Programming</h3>
+                        <p class="course-info__code">Course Code: CSC13008</p>
+                    </div>
+                    
+                    <div class="course-info-grid">
+                        <div class="course-info-item">
+                            <svg class="course-info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <div>
+                                <label class="course-info-label">Schedule</label>
+                                <p class="course-info-text">Thursday, 2nd - 5th period</p>
+                            </div>
+                        </div>
+
+                        <div class="course-info-item">
+                            <svg class="course-info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <label class="course-info-label">Location</label>
+                                <p class="course-info-text">Room 107, Building D, HCMUS 2nd facility</p>
+                            </div>
+                        </div>
+
+                        <div class="course-info-item">
+                            <svg class="course-info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <div>
+                                <label class="course-info-label">Lecturer</label>
+                                <p class="course-info-text">Nguyễn Huy Khánh</p>
+                                <p class="course-info-email">
+                                    <a href="mailto:nhkhanh@fit.hcmus.edu.vn">nhkhanh@fit.hcmus.edu.vn</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Photo Section -->
+        <section id="group-photo">
+            <h2>Our Team</h2>
+            <div class="group-photo-container">
+                <div class="photo-map">
+                    <a href="default.html">
+                        <img src="images/group-photo.jpg" alt="Tech Study Group Team Photo" class="group-photo">
+                    </a>
+                    
+                    <!-- Clickable hotspot covering the member in center of photo -->
+                    <!-- Adjusted for single person in the photo standing in center -->
+                    <a href="members/22120287/22120287.html" class="member-hotspot member-hotspot-1" 
+                       data-name="Nguyễn Mạnh Phương"></a>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; color: var(--gray-50); font-style: italic; text-align: center;">
+                Click on the photo to view the profile
+            </p>
+        </section>
+
+        <!-- Members List Section -->
+        <section id="members">
+            <h2>Member Directory</h2>
+            <div class="member-grid">
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <img src="members/22120287/images/z5878666487641_a71c8fa77fd195b52b7f214549333010.jpg" alt="Nguyễn Mạnh Phương" class="member-card__image">
+                    <h3 class="member-card__title">Nguyễn Mạnh Phương</h3>
+                    <p class="member-card__info"><strong>Student ID:</strong> 22120287</p>
+                    <p class="member-card__info"><strong>Role:</strong> Team Leader</p>
+                    <p class="member-card__info"><strong>Specialization:</strong> Software engineering</p>
+                    <p class="member-card__info"><strong>Email:</strong> 22120287@student.hcmus.edu.vn</p>
+                    <a href="members/22120287/22120287.html" class="member-card__link">View Full Profile</a>
+                </div>
+
+                <!-- Member 2 -->
+                <!-- <div class="member-card">
+                    <img src="https://picsum.photos/seed/marcus2/400/400" alt="Marcus Johnson" class="member-card__image">
+                    <h3 class="member-card__title">Marcus Johnson</h3>
+                    <p class="member-card__info"><strong>Student ID:</strong> 20210002</p>
+                    <p class="member-card__info"><strong>Role:</strong> Backend Developer</p>
+                    <p class="member-card__info"><strong>Specialization:</strong> Database Systems</p>
+                    <p class="member-card__info"><strong>Email:</strong> marcus.johnson@university.edu</p>
+                    <a href="members/20210002/20210002.html" class="member-card__link">View Full Profile</a>
+                </div> -->
+
+                <!-- Member 3 -->
+                <!-- <div class="member-card">
+                    <img src="https://picsum.photos/seed/aria3/400/400" alt="Aria Martinez" class="member-card__image">
+                    <h3 class="member-card__title">Aria Martinez</h3>
+                    <p class="member-card__info"><strong>Student ID:</strong> 20210003</p>
+                    <p class="member-card__info"><strong>Role:</strong> Frontend Developer</p>
+                    <p class="member-card__info"><strong>Specialization:</strong> UI/UX Design</p>
+                    <p class="member-card__info"><strong>Email:</strong> aria.martinez@university.edu</p>
+                    <a href="members/20210003/20210003.html" class="member-card__link">View Full Profile</a>
+                </div> -->
+
+                <!-- Member 4 -->
+                <!-- <div class="member-card">
+                    <img src="https://picsum.photos/seed/kevin4/400/400" alt="Kevin Chen" class="member-card__image">
+                    <h3 class="member-card__title">Kevin Chen</h3>
+                    <p class="member-card__info"><strong>Student ID:</strong> 20210004</p>
+                    <p class="member-card__info"><strong>Role:</strong> DevOps Engineer</p>
+                    <p class="member-card__info"><strong>Specialization:</strong> Cloud Computing</p>
+                    <p class="member-card__info"><strong>Email:</strong> kevin.chen@university.edu</p>
+                    <a href="members/20210004/20210004.html" class="member-card__link">View Full Profile</a>
+                </div> -->
+
+                <!-- Member 5 -->
+                <!-- <div class="member-card">
+                    <img src="https://picsum.photos/seed/sarah5/400/400" alt="Sarah Al-Rahman" class="member-card__image">
+                    <h3 class="member-card__title">Sarah Al-Rahman</h3>
+                    <p class="member-card__info"><strong>Student ID:</strong> 20210005</p>
+                    <p class="member-card__info"><strong>Role:</strong> Data Scientist</p>
+                    <p class="member-card__info"><strong>Specialization:</strong> Machine Learning</p>
+                    <p class="member-card__info"><strong>Email:</strong> sarah.alrahman@university.edu</p>
+                    <a href="members/20210005/20210005.html" class="member-card__link">View Full Profile</a>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Lazer pointer. All rights reserved.</p>
+        <p>fit@hcmus | &copy; 2025 Khoa CNTT, Trường ĐH KHTN, ĐHQG-HCM </p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('header__nav--active');
+                menuToggle.classList.toggle('header__menu-toggle--active');
+            });
+        }
+        
+        // Member select navigation
+        const memberSelect = document.getElementById('memberSelect');
+        if (memberSelect) {
+            memberSelect.addEventListener('change', function() {
+                if (this.value) {
+                    window.location.href = this.value;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

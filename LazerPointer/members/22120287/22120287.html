@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Mạnh Phương - Profile</title>
+    <link rel="stylesheet" href="../../default.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="../../default.html">
+                    <img src="../../images/Logo.svg" alt="Lazer pointer" class="header__title">
+                </a>
+            </div>
+            <button class="header__menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="header__menu-icon"></span>
+                <span class="header__menu-icon"></span>
+                <span class="header__menu-icon"></span>
+            </button>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <!-- <li class="header__nav-item"><a href="../../default.html" class="header__nav-link">Home</a></li> -->
+                    <li class="header__nav-item"><a href="#info" class="header__nav-link">Information</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item">
+                        <select class="header__member-select" id="memberSelect">
+                            <option value="" disabled selected>Nguyễn Mạnh Phương</option>
+                            <option value="../../default.html">Home</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb__container">
+            <a href="../../default.html" class="breadcrumb__link">Home</a>
+            <span>›</span>
+            <a href="../../default.html#members" class="breadcrumb__link">Members</a>
+            <span>›</span>
+            <span>Nguyễn Mạnh Phương</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="./images/z5878666487641_a71c8fa77fd195b52b7f214549333010.jpg" alt="Nguyễn Mạnh Phương" class="profile-image">
+                <h1>Nguyễn Mạnh Phương</h1>
+                <p class="student-id">Student ID: 22120287</p>
+            </div>
+
+  
+            <div class="profile-body">
+                <section id="info">
+                    <h2>Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p>Nguyễn Mạnh Phương</p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Student ID</label>
+                            <p>22120287</p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <p>27/03/2004</p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p><a href="mailto:22120287@student.hcmus.edu.vn">22120287@student.hcmus.edu.vn</a></p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <p><a href="tel:+840977695514">+84 (097) 7695514</a></p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Role in Group</label>
+                            <p>Team Leader</p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Specialization</label>
+                            <p>Software engineering</p>
+                        </div>
+    
+                        <div class="info-item">
+                            <label>Academic Year</label>
+                            <p>Senior (4th Year)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about">
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">About</h3>
+                    <div class="about-content">
+                        <p>I am a dedicated Computer Science student at the University of Science, VNU-HCM, specializing in Software Engineering. I have a strong passion for web development and creating user-friendly applications that solve real-world problems.</p>
+                        
+                        <p>My technical expertise includes HTML, CSS, JavaScript, and modern web development practices. I'm proficient in responsive design, CSS architecture (BEM methodology), and implementing design systems. I'm constantly learning new technologies and frameworks to enhance my skill set and stay current with industry trends.</p>
+    
+                        <p>Beyond academics, I enjoy working on personal projects, exploring new web technologies, and applying best practices in code organization and maintainability. I believe in writing clean, semantic code and creating accessible interfaces that provide great user experiences across all devices.</p>
+                        
+                        <p>I'm always looking for opportunities to grow as a developer and contribute to meaningful projects. Whether it's frontend development, backend systems, or full-stack applications, I approach each challenge with enthusiasm and a commitment to continuous improvement.</p>
+                    </div>
+                </section>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="../../default.html" class="back-link">← Back to Home Page</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Lazer pointer. All rights reserved.</p>
+        <p>fit@hcmus | &copy; 2025 Khoa CNTT, Trường ĐH KHTN, ĐHQG-HCM </p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('header__nav--active');
+                menuToggle.classList.toggle('header__menu-toggle--active');
+            });
+        }
+        
+        // Member select navigation
+        const memberSelect = document.getElementById('memberSelect');
+        if (memberSelect) {
+            memberSelect.addEventListener('change', function() {
+                if (this.value) {
+                    window.location.href = this.value;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
